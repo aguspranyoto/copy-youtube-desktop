@@ -8,8 +8,12 @@ html {
 }
 
 :root {
+  --black-main: rgba(0, 0, 0, 0.912);
   --black-primary: rgba(0, 0, 0, 0.712);
+  --white-primary: white;
   --black-secondary: rgba(0, 0, 0, 0.312);
+  --black-nama-channel: rgba(0, 0, 0, 0.512);
+  --grey-bc: rgb(243, 243, 243);
 }
 
 body {
@@ -21,7 +25,7 @@ body {
   height: 56px;
   padding: 0 20px;
   margin-top: 5px;
-  color: var(--white-primary);
+  color: var(--black-main);
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -32,7 +36,7 @@ body {
   display: flex;
   align-items: center;
   gap: 20px;
-  padding: 8px 20px;
+  padding: 8px 3px;
 }
 
 .header__tengah {
@@ -91,6 +95,15 @@ body {
 .sidebar {
   grid-column: 1;
   grid-row: 1;
+  width: 100%;
+}
+
+.sidebar hr {
+  border: 0;
+  height: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  margin: 8px 20px;
 }
 
 .content {
@@ -99,6 +112,7 @@ body {
 }
 
 .first {
+  width: 90%;
   padding: 4px 10px;
   display: flex;
   justify-content: center;
@@ -107,18 +121,29 @@ body {
 }
 
 .first a {
-  font-size: 16px;
+  font-size: 14px;
   margin-left: 6px;
   text-decoration: none;
   color: var(--black-primary);
   display: flex;
   align-items: center;
   padding: 8px 6px;
+  border: 1px solid transparent;
+}
+
+.first a:hover {
+  border: 1px solid transparent;
+  background-color: var(--grey-bc);
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
 }
 
 .first a:nth-child(1) {
   border: 1px solid transparent;
-  background-color: rgb(243, 243, 243);
+  background-color: var(--grey-bc);
   border-radius: 10px;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
@@ -126,8 +151,230 @@ body {
   -o-border-radius: 10px;
   display: flex;
   align-items: center;
+  font-weight: 600;
 }
 
 .first a svg {
   margin-right: 16px;
+}
+
+.second {
+  width: 90%;
+  padding: 4px 10px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.second a {
+  font-size: 14px;
+  margin-left: 6px;
+  text-decoration: none;
+  color: var(--black-primary);
+  display: flex;
+  align-items: center;
+  padding: 8px 6px;
+  border: 1px solid transparent;
+}
+
+.second a:hover {
+  border: 1px solid transparent;
+  background-color: var(--grey-bc);
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.second a svg {
+  margin-right: 16px;
+}
+
+.subscription .subscription__judul {
+  padding: 8px 6px;
+  margin-left: 6px;
+  font-weight: 600;
+}
+
+.subscription {
+  width: 90%;
+  padding: 4px 10px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.subscription a {
+  display: flex;
+  font-size: 14px;
+  margin-left: 6px;
+  padding: 6px 6px;
+  border: 1px solid transparent;
+}
+
+.subscription a img {
+  margin-right: 16px;
+}
+.subscription a:hover {
+  border: 1px solid transparent;
+  background-color: var(--grey-bc);
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+.subscription a img {
+  width: 24px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.explore {
+  width: 90%;
+  padding: 4px 10px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.explore .explore__judul {
+  padding: 8px 6px;
+  margin-left: 6px;
+  font-weight: 600;
+}
+
+.explore a {
+  font-size: 14px;
+  margin-left: 6px;
+  text-decoration: none;
+  color: var(--black-primary);
+  display: flex;
+  align-items: center;
+  padding: 8px 6px;
+  border: 1px solid transparent;
+}
+
+.explore a:hover {
+  border: 1px solid transparent;
+  background-color: var(--grey-bc);
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.explore a svg {
+  margin-right: 16px;
+}
+
+.content {
+}
+.content .categories {
+  display: flex;
+  gap: 22px;
+  margin: 4px 6px;
+  padding: 4px 6px;
+  align-items: center;
+  justify-content: start;
+}
+
+.content .categories a:nth-child(1) {
+  background-color: var(--black-main);
+  color: var(--white-primary);
+}
+.content .categories a {
+  font-size: 15px;
+  font-weight: 400;
+  border: 1px solid transparent;
+  background-color: var(--grey-bc);
+  border-radius: 8px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  color: var(--black-main);
+  text-decoration: none;
+  padding: 4px 6px;
+}
+
+.container-card {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 20px;
+  padding: 0 50px;
+}
+.card {
+  display: flex;
+  width: 360px;
+  height: 303px;
+  flex-direction: column;
+  margin: 10px 8px;
+  margin-bottom: 40px;
+  border-radius: 16px;
+  -webkit-border-radius: 16px;
+  -moz-border-radius: 16px;
+  -ms-border-radius: 16px;
+  -o-border-radius: 16px;
+}
+.card .card__img {
+  width: 360px;
+  margin-bottom: 8px;
+}
+
+.card .card__img img {
+  width: 100%;
+  height: 240px;
+  border-radius: 16px;
+  -webkit-border-radius: 16px;
+  -moz-border-radius: 16px;
+  -ms-border-radius: 16px;
+  -o-border-radius: 16px;
+}
+
+.card__title {
+  display: flex;
+  gap: 10px;
+}
+
+.card .card__title .card__title__text__bottom {
+  display: flex;
+  align-items: center;
+}
+.card .card__title .card__title__text__bottom {
+  display: flex;
+  align-items: center;
+}
+.card .card__title .card__title__text__bottom a {
+  color: var(--black-nama-channel);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.card .card__title .card__title__img img {
+  width: 36px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+.card .card__title .card__title__text .card__title__text__top {
+  font-weight: 600;
+}
+.card .card__title .card__title__text .card__title__text__bottom,
+.card .card__title .card__title__text .card__title__text__views {
+  color: var(--black-nama-channel);
 }
